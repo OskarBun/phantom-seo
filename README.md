@@ -18,9 +18,15 @@ And finally, just before you require the **app.router** middleware add the follo
 		cacheClient: 'disk', // Can be 'disk' or 'redis'
     	redisURL: 'redis://:password@hostname:port', // If using redis, optionally specify server credentials
 		cacheDuration: 2 * 60 * 60 * 24 * 1000, // In milliseconds for disk cache
-		timeout: 10000 // In milliseconds for phantomjs to timeout for render
+		timeout: 10000 // In milliseconds for phantomjs to timeout when rendering
 	}));
 
 	// app.use(app.router) will be below this line
 
 To be used with HTML5 pushstate
+
+Use this in your client code to trigger phantomjs to stop rendering
+
+	if (typeof window.callPhantom === 'function') {
+		window.callPhantom();
+	}
