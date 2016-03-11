@@ -1,0 +1,26 @@
+{
+  "name": "phantom-seo",
+  "version": "0.0.1",
+  "keywords": [
+    "phantomjs",
+    "headless",
+    "webkit",
+    "seo"
+  ],
+  "dependencies": {
+    "express-useragent": "^0.2.4",
+    "lodash": "~2.4.x",
+    "mkdirp": "~0.3.x",
+    "phantomjs": "^2.1.3",
+    "redis": "~0.10.x"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --require should --reporter spec"
+  },
+  "devDependencies": {
+    "express": "^4.7.2",
+    "mocha": "^1.21.3",
+    "request": "^2.39.0",
+    "should": "^4.0.4"
+  }
+}
